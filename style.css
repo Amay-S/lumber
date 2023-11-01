@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #D2B48C;
+    margin: 0;
+    padding-top: 0; /* Set padding-top to 0 */
+}
+
+
+/* Footer */
+footer {
+    background-color: #A0522D;
+    padding: 10px 0; /* Adjusting footer padding */
+    text-align: center;
+    color: white;
+}
+
+.main-container {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    background-color: #D2B48C;
+    padding-top: 57px; /* Adjust this value based on the height of your navbar */
+}
+
+
+/* Video and Image responsiveness */
+img {
+    width: 100%;  
+    height: 100%; 
+    object-fit: cover; /* This will ensure that the video covers the full width and height of its container without stretching */
+    display: block; 
+}
+
+
+/* Grid for the image cards to make them same height */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 100%; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+    transition: 0.3s; 
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio for landscape videos */
+    overflow: hidden;
+    width: 100%;
+    max-height: 250px; /* This will determine the height of the video */
+}
+
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
+}
+
+/* If you want to reduce the actual height of the video-wrapper (while maintaining the aspect ratio), you can set a max-height */
+.video-container .video-wrapper {
+    max-height: 420px; /* Adjust this value to your preference */
+    overflow: hidden;
+}
+
+
+
+/* NavBar */
+.navbar {
+    background-color: #FFEBCD;
+    transition: all 0.3s;
+    height: 100px; /* Adjust height for desktop */
+}
+
+
+.navbar-brand {
+    position: relative; /* Change from absolute to relative */
+    transform: none; /* Remove this line */
+}
+
+.navbar-brand img {
+    height: 100px; /* Adjust height for desktop logo */
+    transition: all 0.3s;
+    margin-top: -10px;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-light .navbar-toggler-icon {
+    background-color: #A0522D;
+}
+
+.navbar-nav.ml-auto {
+    margin-left: auto !important;
+}
+
+.navbar-nav.ml-auto li a {
+    padding: 8px 16px;
+    background-color: #D2B48C;
+    margin-left: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.navbar-nav.ml-auto li a:hover {
+    background-color: #A0522D;
+    color: white;
+}
+
+.navbar-collapse {
+    max-height: 150px;
+    overflow-y: auto;
+    width: 250px; /* or adjust to your preferred width */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* This ensures that the items inside are spaced out evenly */
+}

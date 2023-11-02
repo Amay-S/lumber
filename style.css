@@ -92,7 +92,7 @@ footer {
 .navbar {
     background-color: #FFEBCD;
     transition: all 0.3s;
-    height: 85px; /* Adjust height for desktop */
+    height: 100px; /* Adjust height for desktop */
 }
 
 
@@ -144,8 +144,8 @@ footer {
 
 #contact-us, #about-us, #product {
     padding: 30px;
-    padding-top: 85px;
-    padding-bottom: 85px;
+    padding-top: 95px;
+    padding-bottom: 95px;
     border-radius: 5px;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.527);
 }

@@ -62,13 +62,13 @@ footer {
     display: block;
 }
 
-/* 
+
 .video-wrapper {
     position: relative;
-    padding-bottom: 56.25%; 
+    padding-bottom: 56.25%; /* 16:9 aspect ratio for landscape videos */
     overflow: hidden;
     width: 100%;
-    max-height: 250px; 
+    max-height: 250px; /* This will determine the height of the video */
 }
 
 .video-container video {
@@ -80,28 +80,12 @@ footer {
     object-fit: cover;
 }
 
-
+/* If you want to reduce the actual height of the video-wrapper (while maintaining the aspect ratio), you can set a max-height */
 .video-container .video-wrapper {
-    max-height: 420px; 
+    max-height: 420px; /* Adjust this value to your preference */
     overflow: hidden;
-} */
-
-.video-wrapper {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
-    max-height: 420px; /* Adjust based on your preference */
 }
 
-.video-wrapper video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* This will make the video cover the container without distortion */
-}
 
 
 /* NavBar */

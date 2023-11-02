@@ -19,9 +19,8 @@ footer {
     box-sizing: border-box;
     margin: 0 auto;
     background-color: #D2B48C;
-    padding-top: 57px; /* Adjust this value based on the height of your navbar */
+    padding-top: 90px; /* Adjust this value based on the height of your navbar */
 }
-
 
 /* Grid for the image cards to make them same height */
 .row {
@@ -93,7 +92,7 @@ footer {
 .navbar {
     background-color: #FFEBCD;
     transition: all 0.3s;
-    height: 100px; /* Adjust height for desktop */
+    height: 85px; /* Adjust height for desktop */
 }
 
 
@@ -143,10 +142,10 @@ footer {
     justify-content: space-between; /* This ensures that the items inside are spaced out evenly */
 }
 
-
-
 #contact-us, #about-us, #product {
     padding: 30px;
+    padding-top: 85px;
+    padding-bottom: 85px;
     border-radius: 5px;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.527);
 }
@@ -156,8 +155,15 @@ footer {
 }
 
 .btn-primary {
-    background-color: #007bff;
-    border-color: #007bff;
+    background-color: #A0522D !important;
+    border: 2px solid black !important;
+    width: 100px;
+
+}
+
+.btn-primary:hover {
+    background-color: black !important;
+    border: 2px solid black !important;
 }
 
 .social-icons {
@@ -171,3 +177,12 @@ footer {
     text-decoration: none;
 }
 
+.product-list {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.product-list li {
+    margin: 10px 0;
+    font-size: 16px;
+}

@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const indicators = document.querySelectorAll('.carousel-indicators .indicator');
     const prevButton = document.querySelector('.carousel-btn-prev');
     const nextButton = document.querySelector('.carousel-btn-next');
-    
+
     function moveCarousel(direction = 'next') {
         videoWrappers[index].classList.remove('active');
         indicators[index].classList.remove('active');
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
         videoWrappers[index].classList.add('active');
         indicators[index].classList.add('active');
     }
-    
+
     setInterval(() => moveCarousel('next'), 10000); // Move carousel every 5 seconds
 
     prevButton.addEventListener('click', () => moveCarousel('prev'));
@@ -43,37 +43,34 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+// JavaScript function to toggle images
+function toggleImages() {
+    const extraImages = document.querySelectorAll('.image-extra');
+    const button = document.getElementById('toggleImages');
+    const isShowingMore = button.textContent.includes('Less');
 
-// // contact us 
+    // Toggle the display of the extra images
+    extraImages.forEach((image, index) => {
+        if (!isShowingMore) { // If we are showing less, show all images
+            image.style.display = 'block';
+        } else { // If we are showing more, hide all but the first three images
+            image.style.display = 'none';
+        }
+    });
 
-// document.querySelector('form').addEventListener('submit', async function (e) {
-//     e.preventDefault();
+    // Update button text
+    button.textContent = isShowingMore ? 'View More' : 'View Less';
+}
 
-//     const data = {
-//         name: document.getElementById('name').value,
-//         email: document.getElementById('email').value,
-//         subject: document.getElementById('subject').value,
-//         message: document.getElementById('message').value
-//     };
+// Initial state setup, hide extra images
+document.addEventListener('DOMContentLoaded', (event) => {
+    const extraImages = document.querySelectorAll('.image-extra');
+    // Hide all but the first three images
+    extraImages.forEach((image, index) => {
+        if (index >= 3) { // Hide images after the first 3
+            image.style.display = 'none';
+        }
+    });
+});
 
-//     // Check if any field is empty
-//     if (!data.name || !data.email || !data.subject || !data.message) {
-//         alert('Please fill in all fields');
-//         return;
-//     }
 
-//     try {
-//         const response = await fetch('http://localhost:3000/sendmail', {
-//             method: 'POST',
-//             headers: {
-//                 'Content-Type': 'application/json'
-//             },
-//             body: JSON.stringify(data)
-//         });
-
-//         const responseData = await response.json();
-//         alert(responseData.message);
-//     } catch (error) {
-//         alert('Error sending email');
-//     }
-// });

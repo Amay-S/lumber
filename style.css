@@ -2,16 +2,68 @@ body {
     font-family: Arial, sans-serif;
     background-color: #D2B48C;
     margin: 0;
-    padding-top: 0; /* Set padding-top to 0 */
+    padding-top: 0;
+    /* Set padding-top to 0 */
+}
+
+/* NavBar */
+.navbar {
+    background-color: #FFEBCD;
+    transition: all 0.3s;
+    height: 100px;
+    /* Adjust height for desktop */
 }
 
 
-/* Footer */
-footer {
+.navbar-brand {
+    position: relative;
+    /* Change from absolute to relative */
+    transform: none;
+    /* Remove this line */
+}
+
+.navbar-brand img {
+    height: 100px;
+    /* Adjust height for desktop logo */
+    transition: all 0.3s;
+    margin-top: -10px;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-light .navbar-toggler-icon {
     background-color: #A0522D;
-    padding: 10px 0; /* Adjusting footer padding */
-    text-align: center;
+}
+
+.navbar-nav.ml-auto {
+    margin-left: auto !important;
+}
+
+.navbar-nav.ml-auto li a {
+    padding: 8px 16px;
     color: white;
+    background-color: #A0522D;
+    margin-left: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.navbar-nav.ml-auto li a:hover {
+    background-color: rgb(8, 75, 46);
+}
+
+.navbar-collapse {
+    max-height: 150px;
+    overflow-y: auto;
+    width: 250px;
+    /* or adjust to your preferred width */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* This ensures that the items inside are spaced out evenly */
 }
 
 .main-container {
@@ -19,7 +71,8 @@ footer {
     box-sizing: border-box;
     margin: 0 auto;
     background-color: #D2B48C;
-    padding-top: 90px; /* Adjust this value based on the height of your navbar */
+    padding-top: 90px;
+    /* Adjust this value based on the height of your navbar */
 }
 
 /* Grid for the image cards to make them same height */
@@ -29,68 +82,10 @@ footer {
 }
 
 .card {
-    width: 100%; 
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
-    transition: 0.3s; 
-}
-
-/* Container and Image Fixed Size */
-.image-card .row {
-    margin-left: 0;
-    margin-right: 0;
-}
-
-.image-card .col-md-4 {
-    display: flex;
-    justify-content: center;
-    padding: 15px;  /* You can adjust this value based on your design */
-}
-
-.image-card .card {
-    width: 100%;  /* Set a fixed width for the image card */
-    height: 300px;  /* Set a fixed height for the image card */
-    overflow: hidden; /* Hide overflowing content */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: 0.3s;
-    margin-bottom: 15px; /* Add spacing between the cards */
-}
-
-.image-card img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-/* Image product */
-.image-card-product .row {
-    margin-left: 0;
-    margin-right: 0;
-}
-
-.image-card-product .col-md-4 {
-    display: flex;
-    justify-content: center;
-    padding: 15px;  /* You can adjust this value based on your design */
-}
-
-.image-card-product .card {
-    width: 100%;  /* Set a fixed width for the image card */
-    height: 300px;  /* Set a fixed height for the image card */
-    overflow: hidden; /* Hide overflowing content */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: 0.3s;
-    margin-bottom: 15px; /* Add spacing between the cards */
 }
-
-.image-card-product img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-
 
 
 /* video card  */
@@ -101,7 +96,8 @@ footer {
     overflow: hidden;
     width: 100%;
     max-height: 250px;
-    display: none; /* Hide by default */
+    display: none;
+    /* Hide by default */
 }
 
 .video-container video {
@@ -119,7 +115,8 @@ footer {
 }
 
 .video-wrapper.active {
-    display: block; /* Only display the active slide */
+    display: block;
+    /* Only display the active slide */
 }
 
 .carousel-indicators {
@@ -150,17 +147,20 @@ footer {
     border: none;
     padding: 10px;
     cursor: pointer;
-    z-index: 10; /* This ensures the arrows are above the video controls */
+    z-index: 10;
+    /* This ensures the arrows are above the video controls */
 }
 
 .carousel-btn-prev {
     left: 10px;
-    transform: translateY(-60%); /* Adjust vertical positioning */
+    transform: translateY(-60%);
+    /* Adjust vertical positioning */
 }
 
 .carousel-btn-next {
     right: 10px;
-    transform: translateY(-60%); /* Adjust vertical positioning */
+    transform: translateY(-60%);
+    /* Adjust vertical positioning */
 }
 
 .carousel-btn:hover {
@@ -168,61 +168,140 @@ footer {
 }
 
 
-/* NavBar */
-.navbar {
-    background-color: #FFEBCD;
-    transition: all 0.3s;
-    height: 100px; /* Adjust height for desktop */
-}
-
-
-.navbar-brand {
-    position: relative; /* Change from absolute to relative */
-    transform: none; /* Remove this line */
-}
-
-.navbar-brand img {
-    height: 100px; /* Adjust height for desktop logo */
-    transition: all 0.3s;
-    margin-top: -10px;
-}
-
-.navbar-toggler {
-    border: none;
-}
-
-.navbar-light .navbar-toggler-icon {
-    background-color: #A0522D;
-}
-
-.navbar-nav.ml-auto {
-    margin-left: auto !important;
-}
-
-.navbar-nav.ml-auto li a {
-    padding: 8px 16px;
-    background-color: #D2B48C;
-    margin-left: 10px;
-    border: 2px solid black;
+/* About Us Container and Image Fixed Size */
+#about-us {
+    padding: 30px;
+    padding-top: 95px;
+    padding-bottom: 95px;
     border-radius: 5px;
-    transition: all 0.3s;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.527);
 }
 
-.navbar-nav.ml-auto li a:hover {
-    background-color: #A0522D;
-    color: white;
+.image-card .row {
+    margin-left: 0;
+    margin-right: 0;
 }
 
-.navbar-collapse {
-    max-height: 150px;
-    overflow-y: auto;
-    width: 250px; /* or adjust to your preferred width */
+.image-card .col-md-12 {
+    /* Updated from col-md-4 to col-md-12 */
+    padding-top: 130px;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* This ensures that the items inside are spaced out evenly */
+    justify-content: center;
 }
 
-#contact-us, #about-us, #product {
+.image-card .card {
+    width: 100%;
+    height: 240px;
+    /* Reduced the height from 300px to 240px */
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+    margin-bottom: 15px;
+}
+
+.image-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* Product and Images */
+
+#product {
+    padding: 30px;
+    padding-top: 95px;
+    padding-bottom: 95px;
+    border-radius: 5px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.527);
+}
+
+.product-list {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.product-list li {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.image-card-product .card {
+    width: 100%;
+    height: 240px;
+    /* Reduced the height from 300px to 240px */
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+
+}
+
+.image-card-product .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.image-card-product .col-md-12 {
+    /* Updated from col-md-4 to col-md-12 */
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Images  Extra */
+
+.image-card-extra .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.image-card-extra .col-md-4 {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    /* You can adjust this value based on your design */
+}
+
+.image-card-extra .card {
+    width: 100%;
+    /* Set a fixed width for the image card */
+    height: 300px;
+    /* Set a fixed height for the image card */
+    overflow: hidden;
+    /* Hide overflowing content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+    margin-bottom: 15px;
+    /* Add spacing between the cards */
+}
+
+.image-card-extra img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.image-card-extra .image-extra {
+    display: none;
+}
+
+
+.btn-primary {
+    background-color: #A0522D !important;
+    border: 2px solid black !important;
+    
+}
+.btn-primary:hover {
+    background-color: rgb(8, 75, 46) !important;
+    border: 2px solid rgb(0, 0, 0) !important;
+}
+
+
+/* Contact Us section */
+
+#contact-us {
     padding: 30px;
     padding-top: 95px;
     padding-bottom: 95px;
@@ -234,17 +313,6 @@ footer {
     margin-bottom: 25px;
 }
 
-.btn-primary {
-    background-color: #A0522D !important;
-    border: 2px solid black !important;
-    width: 100px;
-
-}
-
-.btn-primary:hover {
-    background-color: black !important;
-    border: 2px solid black !important;
-}
 
 .social-icons {
     margin-top: 20px;
@@ -257,12 +325,12 @@ footer {
     text-decoration: none;
 }
 
-.product-list {
-    list-style-type: disc;
-    padding-left: 20px;
-}
 
-.product-list li {
-    margin: 10px 0;
-    font-size: 16px;
+/* Footer */
+footer {
+    background-color: #A0522D;
+    padding: 10px 0;
+    /* Adjusting footer padding */
+    text-align: center;
+    color: white;
 }

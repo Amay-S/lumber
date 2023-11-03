@@ -135,7 +135,7 @@ body {
 }
 
 .indicator.active {
-    background-color: #333;
+    background-color: rgb(8, 75, 46);
 }
 
 .carousel-btn {

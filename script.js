@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
         indicators[index].classList.add('active');
     }
 
-    setInterval(() => moveCarousel('next'), 10000); // Move carousel every 5 seconds
+    setInterval(() => moveCarousel('next'), 15000); // Move carousel every 15 seconds
 
     prevButton.addEventListener('click', () => moveCarousel('prev'));
     nextButton.addEventListener('click', () => moveCarousel('next'));
